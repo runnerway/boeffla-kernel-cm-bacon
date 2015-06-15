@@ -39,7 +39,7 @@
 #include <linux/lcd_notify.h>
 #endif
 #include <linux/cpufreq.h>
-#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
+#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)
 #include <linux/earlysuspend.h>
 #endif
 #ifdef CONFIG_EXYNOS4_EXPORT_TEMP
@@ -53,7 +53,7 @@
 #include <linux/ktime.h>
 #include <linux/module.h>
 #include <linux/mutex.h>
-#if defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
+#if defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)
 #include <linux/powersuspend.h>
 #endif
 #include <linux/sched.h>
@@ -2185,7 +2185,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 		 */
 		if (unlikely(pol_max < dbs_tuners_ins.up_threshold_hotplug_freq1
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.up_threshold_hotplug_freq1
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.up_threshold_hotplug_freq1
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.up_threshold_hotplug_freq1
@@ -2197,7 +2197,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 #if (MAX_CORES == 4 || MAX_CORES == 8)
 		if  (unlikely(pol_max < dbs_tuners_ins.up_threshold_hotplug_freq2
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.up_threshold_hotplug_freq2
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.up_threshold_hotplug_freq2
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.up_threshold_hotplug_freq2
@@ -2209,7 +2209,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.up_threshold_hotplug_freq3
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.up_threshold_hotplug_freq3
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.up_threshold_hotplug_freq3
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.up_threshold_hotplug_freq3
@@ -2222,7 +2222,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 #if (MAX_CORES == 8)
 		if  (unlikely(pol_max < dbs_tuners_ins.up_threshold_hotplug_freq4
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.up_threshold_hotplug_freq4
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.up_threshold_hotplug_freq4
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.up_threshold_hotplug_freq4
@@ -2234,7 +2234,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.up_threshold_hotplug_freq5
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.up_threshold_hotplug_freq5
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.up_threshold_hotplug_freq5
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.up_threshold_hotplug_freq5
@@ -2246,7 +2246,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.up_threshold_hotplug_freq6
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.up_threshold_hotplug_freq6
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.up_threshold_hotplug_freq6
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.up_threshold_hotplug_freq6
@@ -2258,7 +2258,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.up_threshold_hotplug_freq7
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.up_threshold_hotplug_freq7
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.up_threshold_hotplug_freq7
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.up_threshold_hotplug_freq7
@@ -2270,7 +2270,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 #endif
 		if  (unlikely(pol_max < dbs_tuners_ins.down_threshold_hotplug_freq1
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.down_threshold_hotplug_freq1
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.down_threshold_hotplug_freq1
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.down_threshold_hotplug_freq1
@@ -2282,7 +2282,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 #if (MAX_CORES == 4 || MAX_CORES == 8)
 		if  (unlikely(pol_max < dbs_tuners_ins.down_threshold_hotplug_freq2
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.down_threshold_hotplug_freq2
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.down_threshold_hotplug_freq2
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.down_threshold_hotplug_freq2
@@ -2294,7 +2294,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.down_threshold_hotplug_freq3
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.down_threshold_hotplug_freq3
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.down_threshold_hotplug_freq3
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.down_threshold_hotplug_freq3
@@ -2307,7 +2307,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 #if (MAX_CORES == 8)
 		if  (unlikely(pol_max < dbs_tuners_ins.down_threshold_hotplug_freq4
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.down_threshold_hotplug_freq4
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.down_threshold_hotplug_freq4
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.down_threshold_hotplug_freq4
@@ -2319,7 +2319,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.down_threshold_hotplug_freq5
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.down_threshold_hotplug_freq5
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.down_threshold_hotplug_freq5
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.down_threshold_hotplug_freq5
@@ -2331,7 +2331,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.down_threshold_hotplug_freq6
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.down_threshold_hotplug_freq6
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.down_threshold_hotplug_freq6
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.down_threshold_hotplug_freq6
@@ -2343,7 +2343,7 @@ static inline void adjust_freq_thresholds(unsigned int step)
 
 		if  (unlikely(pol_max < dbs_tuners_ins.down_threshold_hotplug_freq7
 		    || dbs_tuners_ins.freq_limit < dbs_tuners_ins.down_threshold_hotplug_freq7
-#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
+#if (defined(CONFIG_HAS_EARLYSUSPEND) || defined(CONFIG_POWERSUSPEND) && !defined(DISABLE_POWER_MANAGEMENT)) || defined(USE_LCD_NOTIFIER)
 		    || dbs_tuners_ins.freq_limit_sleep < dbs_tuners_ins.down_threshold_hotplug_freq7
 #endif
 		    || dbs_tuners_ins.music_max_freq < dbs_tuners_ins.down_threshold_hotplug_freq7
@@ -7626,13 +7626,13 @@ void zzmoove_resume(void)
 #endif
 }
 
-#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined (DISABLE_POWER_MANAGEMENT)
+#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT)
 static struct early_suspend __refdata _powersave_early_suspend = {
   .suspend = powersave_early_suspend,
   .resume = powersave_late_resume,
   .level = EARLY_SUSPEND_LEVEL_BLANK_SCREEN,
 };
-#elif defined(CONFIG_POWERSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined (DISABLE_POWER_MANAGEMENT)
+#elif defined(CONFIG_POWERSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT)
 static struct power_suspend __refdata powersave_powersuspend = {
   .suspend = powersave_suspend,
   .resume = powersave_resume,
@@ -7777,9 +7777,9 @@ static int cpufreq_governor_dbs(struct cpufreq_policy *policy,
 		}
 		mutex_unlock(&dbs_mutex);
 		dbs_timer_init(this_dbs_info);
-#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
+#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT)
 		register_early_suspend(&_powersave_early_suspend);
-#elif defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
+#elif defined(CONFIG_POWERSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT)
 		if (cpu == 0)
 		    register_power_suspend(&powersave_powersuspend);
 #endif
@@ -7826,9 +7826,9 @@ static int cpufreq_governor_dbs(struct cpufreq_policy *policy,
 		if (!dbs_enable)
 		    sysfs_remove_group(cpufreq_global_kobject,
 		   &dbs_attr_group);
-#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
+#if defined(CONFIG_HAS_EARLYSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT)
 		unregister_early_suspend(&_powersave_early_suspend);
-#elif defined(CONFIG_POWERSUSPEND) && !defined (DISABLE_POWER_MANAGEMENT)
+#elif defined(CONFIG_POWERSUSPEND) && !defined(USE_LCD_NOTIFIER) && !defined(DISABLE_POWER_MANAGEMENT)
 		if (cpu == 0)
 		    unregister_power_suspend(&powersave_powersuspend);
 #endif
